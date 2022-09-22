@@ -24,7 +24,7 @@
   '.--' => 'W',
   '-..-' => 'X',
   '-.--' => 'Y',
-  '--..' => 'Z',
+  '--..' => 'Z'
 }
 
 def decode_morse_char(char)
@@ -43,10 +43,10 @@ def decode_morse_message(message)
   arr = message.split('   ')
   arr.each_with_index do |n, index|
     decoded_message += if index == arr.length - 1
-      decode_morse_word(n)
-    else
-      "#{decode_morse_word(n)} "
-    end
+                          decode_morse_word(n)
+                        else
+                          "#{decode_morse_word(n)} "
+                        end
   end
   decoded_message
 end
