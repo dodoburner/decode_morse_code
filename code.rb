@@ -45,7 +45,7 @@ def decode_morse_message(message)
     if index == arr.length - 1
       decoded_message += decode_morse_word(n)
     else
-      decoded_message += decode_morse_word(n) + " "
+      decoded_message += "#{decode_morse_word(n)} "
     end
   end
   return decoded_message
